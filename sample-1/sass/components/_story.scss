@@ -4,6 +4,28 @@
   padding: 5rem;
   background-color: $color-white;
   border-radius: 3px;
+  padding-left: 8rem;
+  opacity: .7;
+  transform: skewX(-12deg);
 
   box-shadow: .3rem 3rem 6rem $color-shadow-dark;
+
+  &>* {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    height: 13.5rem;
+    width: 13.5rem;
+    float: left;
+
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+
+    &>img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }

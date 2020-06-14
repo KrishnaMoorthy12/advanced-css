@@ -180,6 +180,7 @@ body {
 }
 
 .description {
+  font-family: 'Lato', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -582,8 +583,34 @@ body {
   padding: 5rem;
   background-color: #fff;
   border-radius: 3px;
+  padding-left: 8rem;
+  opacity: .7;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
   -webkit-box-shadow: 0.3rem 3rem 6rem rgba(0, 0, 0, 0.2);
           box-shadow: 0.3rem 3rem 6rem rgba(0, 0, 0, 0.2);
+}
+
+.story > * {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.story__shape {
+  height: 13.5rem;
+  width: 13.5rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem) skewX(12deg);
+          transform: translateX(-3rem) skewX(12deg);
+}
+
+.story__shape > img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .row {
