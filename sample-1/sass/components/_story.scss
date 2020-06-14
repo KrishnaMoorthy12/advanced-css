@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 5rem;
   background-color: rgba($color-white, .6);
-  border-radius: 3px;
+  border-radius: $corner-radius;
   padding-left: 8rem;
   transform: skewX(-12deg);
 

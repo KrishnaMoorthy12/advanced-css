@@ -1,0 +1,59 @@
+.form {
+  &__group {
+    padding-bottom: 2rem;
+    font-family: $font-secondary;
+  }
+
+  &__input {
+    padding: 1.5rem 2rem;
+    font-size: $default-font-size;
+    font-family: inherit;
+    background-color: rgba($color-white, .7);
+    border: none;
+    outline: none;
+    transition: all .4s;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block;
+    border-radius: $corner-radius;
+
+    &::placeholder {
+      color: lighten($color-text-gray, 10%);
+    }
+
+    &:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &:valid {
+      border-bottom: 3px solid $color-tertiary-light;
+    }
+
+    &:focus {
+      border-bottom: 3px solid $color-primary-main;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    }
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    padding: .7rem 2rem;
+    display: block;
+
+    overflow: hidden;
+    transform: translateY(-3rem);
+    transition: all .2s;
+  }
+
+  &__input:placeholder-shown+&__label {
+    transform: translateY(-3rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__input:not(:placeholder-shown)+&__label {
+    transform: translateY(0rem);
+    opacity: 1;
+    visibility: visible;
+  }
+}
