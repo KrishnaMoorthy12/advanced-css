@@ -2,10 +2,9 @@
   width: 75%;
   margin: 0 auto;
   padding: 5rem;
-  background-color: $color-white;
+  background-color: rgba($color-white, .6);
   border-radius: 3px;
   padding-left: 8rem;
-  opacity: .7;
   transform: skewX(-12deg);
 
   box-shadow: .3rem 3rem 6rem $color-shadow-dark;
@@ -22,10 +21,38 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+  }
 
-    &>img {
-      height: 100%;
-      object-fit: cover;
-    }
+  &__author-img {
+    height: 100%;
+    object-fit: cover;
+    transform: translateX(-3rem) scale(1.4);
+    transition: all ease .4s;
+  }
+
+  &__author-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    color: $color-text-white;
+    text-align: center;
+    font-weight: 500;
+
+    transform: translate(-50%, 20%);
+    opacity: 0;
+    transition: all ease .4s;
+  }
+
+  &:hover &__author-name {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__author-img {
+    transform: translateX(-3rem) scale(1);
+    filter: blur(3px) brightness(70%);
   }
 }
