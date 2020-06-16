@@ -27,7 +27,7 @@
                 <span class="heading-primary--main">Outdoors</span>
                 <span class="heading-primary--sub">is where life happens</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover</a>
+            <a href="#discover" class="btn btn--white btn--animated">Discover</a>
         </div>
     </header>
 
@@ -70,7 +70,7 @@
             </div>
         </section>
 
-        <section class="section-features">
+        <section class="section-features" id="features">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -115,7 +115,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="discover">
             <div class="u-text-center u-margin-b-large">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -148,7 +148,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-amount">₹299</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now</a>
+                                <a href="#book" class="btn btn--white">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-amount">₹449</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now</a>
+                                <a href="#book" class="btn btn--white">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-amount">₹799</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now</a>
+                                <a href="#book" class="btn btn--white">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -216,11 +216,11 @@
             </div>
 
             <div class="u-text-center u-margin-a-large">
-                <a href="#" class="btn btn--green">Discover more</a>
+                <a href="#discover" class="btn btn--green">Discover more</a>
             </div>
         </section>
 
-        <section class="section-story">
+        <section class="section-story" id="stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
@@ -275,27 +275,47 @@
             </div>
 
             <div class="u-text-center">
-                <a href="#" class="btn-text">Read more &rarr;</a>
+                <a href="#features" class="btn-text">Read more &rarr;</a>
             </div>
         </section>
 
-        <section class="section-book">
+        <section class="section-book" id="book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
-                        <div class="u-margin-b-medium">
+                        <div class="u-margin-b-small">
                             <h2 class="heading-secondary">
                                 Book Now
                             </h2>
                         </div>
-                        <form action="#" class="form">
+                        <form action="#book" class="form">
                             <div class="form__group">
                                 <input type="text" id="name" placeholder="Name" class=" form__input" required>
                                 <label for="name" class="form__label">Name</label>
                             </div>
+
                             <div class="form__group">
                                 <input type="email" id="email" placeholder="Email" class="form__input" required>
                                 <label for="email" class="form__label">Email</label>
+                            </div>
+
+                            <div class="form__group">
+                                <div class="form__radio-group">
+                                    <input type="radio" name="size" id="small-group" class="form__radio-input">
+                                    <label for="small-group" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Small group</label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" name="size" id="large-group" class="form__radio-input">
+                                    <label for="large-group" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Large group</label>
+                                </div>
+
+                                <div class="form__group u-margin-t-medium">
+                                    <button class="btn btn--green">Proceed &rarr;</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -303,6 +323,43 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box u-text-center u-margin-b-large">
+            <img src="img/logo-green-2x.png" alt="logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer_footer__navigation-list">
+                        <li class="footer__navigation-item">
+                            <a href="#about" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__navigation-item">
+                            <a href="#book" class="footer__link">Contact</a>
+                        </li>
+                        <li class="footer__navigation-item">
+                            <a href="#stories" class="footer__link">Stories</a>
+                        </li>
+                        <li class="footer__navigation-item">
+                            <a href="#privacy" class="footer__link">Privacy Policy</a>
+                        </li>
+                        <li class="footer__navigation-item">
+                            <a href="#terms" class="footer__link">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="https://github.com/KrishnaMoorthy12/" class="footer__link">Krish M.</a> Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit. At veritatis, voluptas exercitationem aut
+                    aperiam animi ut illo itaque id temporibus dignissimos dolor fuga eius officia suscipit fugiat velit
+                    dolorum dolores. &copy; Krishna Moorthy, 2020.
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- 
     <section class="grid-sample">
