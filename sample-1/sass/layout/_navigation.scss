@@ -1,0 +1,78 @@
+.navigation {
+  &__checkbox {}
+
+  &__label {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+
+    &-icon {}
+  }
+
+  &__background {
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 50%;
+
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 1000;
+
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    transform: scale(70);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1500;
+    position: fixed;
+  }
+
+  .nav-list {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: $font-secondary, sans-serif;
+
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 1rem;
+  }
+
+  .nav-link {
+
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-white;
+      padding: 1rem 2rem;
+      border-radius: 1px;
+
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+      background-size: 220%;
+      transition: all .4s ease-in-out;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary-main;
+      transform: translateX(1rem);
+    }
+  }
+}
