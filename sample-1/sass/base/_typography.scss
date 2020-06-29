@@ -1,6 +1,5 @@
 body {
   font-family: 'Raleway', sans-serif;
-  padding: 3rem;
   font-weight: 400;
   font-size: $default-font-size;
   line-height: 1.7;
@@ -26,6 +25,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: .8s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+    }
   }
 
   &--sub {
@@ -36,6 +39,10 @@ body {
     margin-right: -1.34rem;
 
     animation: moveInRight ease-out .8s;
+
+    @include respond(phone) {
+      letter-spacing: normal;
+    }
   }
 }
 
