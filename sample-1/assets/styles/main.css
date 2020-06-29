@@ -734,6 +734,102 @@ body {
   opacity: 1;
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5000;
+  display: table;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: table;
+  width: 75%;
+  background-color: #fff;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  border-radius: 3px;
+  margin: auto;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.9);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.25);
+          transform: translate(-50%, -50%) scale(0.25);
+  -webkit-transition: all .3s .2s;
+  transition: all .3s .2s;
+}
+
+.popup__left {
+  display: table-cell;
+  vertical-align: middle;
+  width: 33.3333333%;
+}
+
+.popup__right {
+  padding: 3rem 5rem;
+  display: table-cell;
+  vertical-align: middle;
+  width: 66.6666666%;
+}
+
+.popup__img {
+  display: block;
+  width: 100%;
+}
+
+.popup__text {
+  margin: 4rem 0;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-column-rule: 1px solid #d1d1d1;
+          column-rule: 1px solid #d1d1d1;
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.popup:target .popup__content {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.popup__close, .popup__close:link, .popup__close:visited {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  line-height: 1;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #555;
+}
+
+.popup__close:hover {
+  color: #d42929;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
