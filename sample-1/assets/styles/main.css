@@ -178,7 +178,7 @@ body {
 .heading-primary--main {
   display: block;
   font-weight: 400;
-  font-size: 5rem;
+  font-size: 5.5rem;
   letter-spacing: 2.5rem;
   margin-right: -2.5rem;
   -webkit-animation-name: moveInLeft;
@@ -207,7 +207,7 @@ body {
 
 @media (max-width: 37.5em) {
   .heading-primary--sub {
-    letter-spacing: normal;
+    letter-spacing: .5rem;
   }
 }
 
@@ -224,6 +224,12 @@ body {
   color: transparent;
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.8rem;
+  }
 }
 
 .heading-secondary:hover {
@@ -373,7 +379,7 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
-  padding: 1rem 3rem;
+  padding: 1.3rem 3rem;
 }
 
 .btn--white::after {
@@ -1020,6 +1026,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+  }
+}
+
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
@@ -1036,6 +1048,19 @@ body {
 
 .row [class^="col-"]:not(:last-child) {
   margin-right: 6rem;
+}
+
+@media (max-width: 56.25em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
 }
 
 .row .col-1-of-2 {
@@ -1071,6 +1096,13 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
+}
+
+@media (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
 }
 
 .header__logo-box {
@@ -1110,6 +1142,13 @@ body {
   z-index: 2000;
 }
 
+@media (max-width: 56.25em) {
+  .navigation__button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -1121,6 +1160,13 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   -webkit-transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1);
   transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@media (max-width: 56.25em) {
+  .navigation__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 
 .navigation__nav {
