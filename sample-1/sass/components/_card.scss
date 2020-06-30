@@ -158,7 +158,7 @@
 /* FOR MEDIA QUERY */
 .card {
 
-  @include respond(tab-port) {
+  @include respond(tab-port-touch) {
     height: auto;
     position: relative;
     border-radius: $corner-radius;

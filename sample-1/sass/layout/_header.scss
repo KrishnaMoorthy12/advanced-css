@@ -3,16 +3,23 @@
   background-image:
     linear-gradient(to bottom right,
       rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+      rgba($color-primary-dark, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
 
+  @media only screen and (min-width: 125em),
+  only screen and (min-resolution: 190dpi) and (min-width: 37.5em) {
+    background-image:
+      linear-gradient(to bottom right,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+  }
+
   @include respond(phone) {
     clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
   }
-
 
   &__logo-box {
     position: absolute;

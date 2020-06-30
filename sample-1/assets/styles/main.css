@@ -116,19 +116,19 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
 }
 
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
   html {
     font-size: 75%;
   }
@@ -140,22 +140,34 @@ body {
   padding: 3rem;
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   body {
     padding: 0;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   body {
     padding: 0;
   }
 }
 
-@media (min-width: 112.5em) {
+@media only screen and (min-width: 112.5em) {
   body {
     padding: 4rem;
   }
+}
+
+::-moz-selection {
+  background-color: #55c57a;
+  color: #fff;
+  display: inline-block;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+  display: inline-block;
 }
 
 body {
@@ -263,7 +275,7 @@ body {
   margin: 8rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-a-large {
     margin: 5rem !important;
   }
@@ -273,7 +285,7 @@ body {
   margin: 4rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-a-medium {
     margin: 3rem !important;
   }
@@ -291,7 +303,7 @@ body {
   margin-bottom: 8rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-b-large {
     margin-bottom: 5rem !important;
   }
@@ -301,7 +313,7 @@ body {
   margin-bottom: 4rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-b-medium {
     margin-bottom: 3rem !important;
   }
@@ -319,7 +331,7 @@ body {
   margin-top: 8rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-t-large {
     margin-top: 5rem !important;
   }
@@ -329,7 +341,7 @@ body {
   margin-top: 4rem !important;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .u-margin-t-medium {
     margin-top: 3rem !important;
   }
@@ -641,7 +653,7 @@ body {
 }
 
 /* FOR MEDIA QUERY */
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .card {
     height: auto;
     position: relative;
@@ -846,7 +858,7 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .form__radio-group {
     width: 100%;
   }
@@ -923,6 +935,14 @@ body {
   visibility: visible;
 }
 
+@supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
+  .popup:target {
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
 .popup__content {
   position: absolute;
   top: 50%;
@@ -947,7 +967,7 @@ body {
   transition: all .3s .2s;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .popup__content {
     width: 90%;
     display: block;
@@ -960,7 +980,7 @@ body {
   width: 33.3333333%;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .popup__left {
     display: none;
   }
@@ -973,7 +993,7 @@ body {
   width: 66.6666666%;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .popup__right {
     padding: 1.5rem 3rem;
     display: block;
@@ -1000,7 +1020,7 @@ body {
           hyphens: auto;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .popup__text {
     margin: 1rem 0 2rem 0;
     overflow-y: scroll;
@@ -1045,7 +1065,7 @@ body {
           transform: skewX(12deg);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .story {
     width: 100%;
     -webkit-transform: none;
@@ -1071,7 +1091,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .story__shape {
     -webkit-transform: none;
             transform: none;
@@ -1089,7 +1109,7 @@ body {
   transition: all ease .4s;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .story__author-img {
     -webkit-transform: scale(1.4);
             transform: scale(1.4);
@@ -1129,7 +1149,7 @@ body {
   padding: 10rem 0;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer {
     padding: 5rem 0;
   }
@@ -1150,7 +1170,7 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__navigation {
     display: block;
     text-align: center;
@@ -1171,7 +1191,7 @@ body {
   margin-right: 1.5rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__navigation-item {
     margin-right: 0;
   }
@@ -1203,7 +1223,7 @@ body {
   float: right;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .footer__copyright {
     width: 100%;
     float: none;
@@ -1214,9 +1234,10 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
+  padding: 0 4rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row {
     max-width: 50rem;
     padding: 0 2rem;
@@ -1241,14 +1262,14 @@ body {
   margin-right: 6rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row [class^="col-"]:not(:last-child) {
     margin-right: 0;
     margin-bottom: 8rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .row [class^="col-"] {
     width: 100% !important;
   }
@@ -1280,13 +1301,20 @@ body {
 
 .header {
   height: 95vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
-  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
+}
+
+@media only screen and (min-width: 125em), only screen and (-webkit-min-device-pixel-ratio: 1.9791666666666667) and (min-width: 37.5em), only screen and (min-resolution: 190dpi) and (min-width: 37.5em) {
+  .header {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/hero.jpg);
+    background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  }
 }
 
 @media (max-width: 37.5em) {
@@ -1333,7 +1361,7 @@ body {
   z-index: 2000;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .navigation__button {
     top: 3rem;
     right: 3rem;
@@ -1353,7 +1381,7 @@ body {
   transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .navigation__background {
     top: 3.5rem;
     right: 3.5rem;
@@ -1473,7 +1501,7 @@ body {
   margin-top: -15rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-about {
     padding: 20rem 0 40rem 0;
   }
@@ -1495,7 +1523,7 @@ body {
           transform: skewY(5deg);
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-features {
     padding: 10rem 0;
   }
@@ -1507,7 +1535,7 @@ body {
   margin-top: -15rem;
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .section-tours {
     padding: 20rem 0 5rem 0;
   }
@@ -1524,7 +1552,7 @@ body {
   background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .section-book {
     padding: 7rem 5rem;
   }
@@ -1538,13 +1566,13 @@ body {
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .book {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .book {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat-10.jpg);
   }
@@ -1555,14 +1583,14 @@ body {
   width: 50%;
 }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .book__form {
     width: 65%;
     padding: 4rem;
   }
 }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .book__form {
     width: 100%;
     padding: 3rem;
