@@ -34,12 +34,21 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .3s .2s;
+
+    @include respond(tab-port) {
+      width: 90%;
+      display: block;
+    }
   }
 
   &__left {
     display: table-cell;
     vertical-align: middle;
     width: 33.3333333%;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__right {
@@ -47,6 +56,12 @@
     display: table-cell;
     vertical-align: middle;
     width: 66.6666666%;
+
+    @include respond(tab-port) {
+      padding: 1.5rem 3rem;
+      display: block;
+      width: 100%;
+    }
   }
 
   &__img {
@@ -63,6 +78,11 @@
     text-align: justify;
 
     hyphens: auto;
+
+    @include respond(tab-port) {
+      margin: 1rem 0 2rem 0;
+      overflow-y: scroll;
+    }
   }
 
   &:target &__content {

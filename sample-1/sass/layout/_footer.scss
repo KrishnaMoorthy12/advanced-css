@@ -1,9 +1,13 @@
 .footer {
   background-color: $color-gray-7;
-  padding: 10rem 7rem;
+  padding: 10rem 0;
+
+  @include respond(tab-port) {
+    padding: 5rem 0;
+  }
 
   &__logo-box {
-    height: 12rem;
+    height: auto;
   }
 
   &__logo {
@@ -16,6 +20,13 @@
     padding-top: 2rem;
     display: inline-block;
 
+    @include respond(tab-port) {
+      display: block;
+      text-align: center;
+      padding-top: 0;
+      margin-bottom: -4rem; // lets remove some shit (margin from col)
+    }
+
     &-list {
       list-style: none;
     }
@@ -25,6 +36,10 @@
 
       &:not(:last-child) {
         margin-right: 1.5rem;
+      }
+
+      @include respond(tab-port) {
+        margin-right: 0;
       }
     }
   }
@@ -55,5 +70,11 @@
     color: $color-gray-2;
     width: 88%;
     float: right;
+
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+      padding-top: 0;
+    }
   }
 }
