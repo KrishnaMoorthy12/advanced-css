@@ -1,0 +1,48 @@
+// FONT
+$default-font-size: 1.6rem;
+$font-default: 'Raleway',
+sans-serif;
+$font-secondary: 'Lato',
+sans-serif;
+
+// RADII
+$corner-radius: 3px;
+$button-radius: 10rem;
+
+// COLORS
+$color-primary-main: #55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+$color-secondary-main: #ffa100;
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-main: #0084ff;
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-tomato: #d42929;
+
+$color-text-gray: #777;
+$color-text-white: #fff;
+
+$color-white: #fff;
+$color-gray-1: #f7f7f7;
+$color-gray-2: #d1d1d1;
+$color-gray-3: #bbbbbb;
+$color-gray-4: #969696;
+$color-gray-5: #555;
+$color-gray-6: #444;
+$color-gray-7: #333;
+$color-gray-8: #222;
+
+$color-black: #000;
+
+$color-shadow-dark: rgba($color-black, 0.2);
+$color-shadow-light: rgba($color-white, 0.2);
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-lan) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 8px
+  }
+
+  @include respond(huge) {
+    font-size: 75%; // 12px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-lan) {
+    padding: 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+  @include respond(huge) {
+    padding: 4rem;
+  }
+}
+
+::selection {
+  background-color: $color-primary-main;
+  color: $color-white;
+  display: inline-block;
+}
