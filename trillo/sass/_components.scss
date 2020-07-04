@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   @media only screen and (max-width: $bp-smaller) {
     order: 1;
@@ -49,6 +50,24 @@
         width: 90%;
       }
     }
+  }
+
+  &__suggestions {
+    border-radius: 1.2rem;
+    opacity: 0;
+    height: 0;
+    transition: all .3s;
+
+    color: var(--color-grey-dark-3);
+  }
+
+  &__input:focus~&__suggestions {
+    width: auto;
+    position: absolute;
+    display: block;
+    top: 120%;
+    opacity: 1;
+    height: auto;
   }
 
   &__btn {
@@ -127,6 +146,8 @@
     position: relative;
 
     .user-options {
+      border-radius: .5rem;
+
       opacity: 0;
       max-height: 0;
       transition: all .3s;
@@ -160,8 +181,7 @@
   min-width: 100%;
   overflow: hidden;
 
-  border-radius: 2px;
-  border: 1px solid var(--color-grey-light-3);
+  z-index: 50;
 }
 
 .dropdown {
@@ -169,14 +189,16 @@
 
   &-item {
     background-color: var(--color-grey-light-1);
+    color: inherit;
     padding: 1.5rem 2rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &__icon {
       height: 1.7rem;
       width: 1.7rem;
-      color: currentColor;
+      fill: currentColor;
     }
 
     &__text {
@@ -233,6 +255,11 @@
       margin: 0;
       flex: 1;
       flex-direction: column;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1.2rem 1.6rem;
     }
 
     &::before {
