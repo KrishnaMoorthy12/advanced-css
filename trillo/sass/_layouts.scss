@@ -20,9 +20,14 @@
   font-size: 1.4rem;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-smaller) {
+    flex-wrap: wrap;
+    height: auto;
+    align-content: space-around;
+  }
 }
 
 .content {
@@ -55,6 +60,10 @@
     padding: 1rem;
   }
 
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
   .description {
     flex: 1 0 60%;
     margin-right: 4rem;
@@ -68,6 +77,11 @@
     @media only screen and (max-width: $bp-medium) {
       padding: 1rem;
       margin-right: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1.5rem;
+      margin: 1rem;
     }
   }
 

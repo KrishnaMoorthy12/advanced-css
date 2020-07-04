@@ -12,6 +12,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smaller) {
+    order: 1;
+    flex: 0 0 100%;
+    padding: 1.5rem 0;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -21,6 +27,10 @@
     background-color: var(--color-grey-light-2);
     padding: .7rem 2rem;
     width: 80%;
+
+    @media only screen and (max-width: $bp-smaller) {
+      width: 85%;
+    }
 
     margin-right: -3rem;
     transition: all .3s;
@@ -34,6 +44,10 @@
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
+
+      @media only screen and (max-width: $bp-smaller) {
+        width: 90%;
+      }
     }
   }
 
@@ -63,7 +77,6 @@
 
 .user-nav {
   display: flex;
-  height: 100%;
   align-self: stretch;
   align-items: stretch;
 
@@ -148,10 +161,10 @@
       flex: 1;
       display: flex;
       justify-content: center;
+      align-items: stretch;
       padding: 0;
     }
   }
-
 
   &__item {
     padding: 1.5rem 3rem;
@@ -204,6 +217,7 @@
       text-transform: uppercase;
       text-align: left;
       z-index: 3;
+      text-align: center;
 
       @media only screen and (max-width: $bp-medium) {
         margin: 0;
@@ -250,28 +264,40 @@
     font-weight: 100;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1rem 2rem;
+    }
+
   }
 
   &__stars {
     margin-right: auto;
     display: flex;
     align-items: center;
-
-    &-icon {
-      height: 1.7rem;
-      width: 1.7rem;
-      fill: var(--color-primary-main);
-    }
   }
 
   &__location {
     display: flex;
     align-items: center;
 
-    &-icon {
-      height: 1.7rem;
-      width: 1.7rem;
-      fill: var(--color-primary-main);
+    &-text {
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__stars-icon,
+  &__location-icon {
+    height: 1.7rem;
+    width: 1.7rem;
+    fill: var(--color-primary-main);
+
+    @media only screen and (max-width: $bp-small) {
+      height: 1.3rem;
+      width: 1.3rem;
     }
   }
 
@@ -287,12 +313,20 @@
 
     &-average {
       font-size: 2.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.8rem;
+      }
     }
 
     &-count {
       text-transform: uppercase;
       font-weight: 700;
       font-size: .8rem;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: .5rem;
+      }
     }
   }
 }
@@ -517,9 +551,18 @@
   text-align: center;
   text-transform: uppercase;
 
+  @media only screen and (max-width: $bp-small) {
+    padding: 1.5rem;
+  }
+
   &__text {
     font-size: 2.5rem;
     margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      margin-bottom: 1.8rem;
+    }
   }
 
   &__btn {
@@ -534,6 +577,10 @@
     cursor: pointer;
     transition: all .3s;
 
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.3rem;
+    }
+
     &>* {
       display: inline-block;
       transition: .3s all;
@@ -541,6 +588,10 @@
 
     .btn-visible {
       padding: 2rem 6.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        padding: 1.3rem 5.4rem;
+      }
     }
 
     .btn-invisible {
