@@ -250,6 +250,26 @@ button {
   border-radius: 50%;
 }
 
+.user-nav__user {
+  position: relative;
+}
+
+.user-nav__user .user-options {
+  opacity: 0;
+  max-height: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.user-nav__user:hover .user-options {
+  width: auto;
+  position: absolute;
+  display: block;
+  top: 100%;
+  opacity: 1;
+  max-height: 45rem;
+}
+
 .user-nav__user-photo {
   height: 3.8rem;
   border-radius: 50%;
@@ -257,6 +277,44 @@ button {
 
 .user-nav__user-name {
   margin-left: 1.5rem;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  border-radius: 2px;
+  border: 1px solid var(--color-grey-light-3);
+}
+
+.dropdown {
+  list-style: none;
+}
+
+.dropdown-item {
+  background-color: var(--color-grey-light-1);
+  padding: 1.5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-item__icon {
+  height: 1.7rem;
+  width: 1.7rem;
+  color: currentColor;
+}
+
+.dropdown-item__text {
+  margin-left: 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-grey-light-3);
 }
 
 .sidebar {
@@ -646,11 +704,19 @@ button {
   height: 1.3rem;
   width: 1.3rem;
   margin-right: 1rem;
-  background-color: var(--color-primary-main);
-  -webkit-mask-image: url(../img/SVG/chevron-right.svg);
-          mask-image: url(../img/SVG/chevron-right.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  background-image: url(../img/SVG/chevron-right.svg);
+  background-size: cover;
+}
+
+@supports ((-webkit-mask-image: url(../img/SVG/chevron-right.svg)) or (mask-image: url(../img/SVG/chevron-right.svg))) or (--webkit-mask-image: url(../img/SVG/chevron-right.svg)) {
+  .features__item::before {
+    background-color: var(--color-primary-main);
+    -webkit-mask-image: url(../img/SVG/chevron-right.svg);
+            mask-image: url(../img/SVG/chevron-right.svg);
+    -webkit-mask-size: cover;
+            mask-size: cover;
+    background-image: none;
+  }
 }
 
 .recommend {
